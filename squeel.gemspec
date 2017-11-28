@@ -1,26 +1,28 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "squeel/version"
+
+# frozen_string_literal: true
+
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+require 'squeel/version'
 
 Gem::Specification.new do |s|
-  s.name        = "squeel"
+  s.name        = 'squeel'
   s.version     = Squeel::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Ernie Miller", "Xiang Li"]
-  s.email       = ["ernie@erniemiller.org", "bigxiang@gmail.com"]
-  s.homepage    = "https://github.com/ernie/squeel"
-  s.summary     = %q{Active Record, improved.}
-  s.description = %q{
+  s.authors     = ['Ernie Miller', 'Xiang Li']
+  s.email       = ['ernie@erniemiller.org', 'bigxiang@gmail.com']
+  s.homepage    = 'https://github.com/ernie/squeel'
+  s.summary     = 'Active Record, improved.'
+  s.description = '
       Squeel unlocks the power of Arel in your Rails application with
       a handy block-based syntax. You can write subqueries, access named
       functions provided by your RDBMS, and more, all without writing
       SQL strings. Supporting Rails 3 and 4.
-    }
-  s.rubyforge_project = "squeel"
+    '
+  s.rubyforge_project = 'squeel'
 
-  s.add_dependency 'activerecord', '>= 3.0'
-  s.add_dependency 'activesupport', '>= 3.0'
-  s.add_dependency 'polyamorous', '~> 1.1.0'
+  s.add_dependency 'activerecord'
+  s.add_dependency 'activesupport'
+  s.add_dependency 'polyamorous'
   s.add_development_dependency 'rspec', '~> 2.6.0'
   s.add_development_dependency 'faker', '~> 0.9.5'
   s.add_development_dependency 'sqlite3', '~> 1.3.3'
@@ -32,6 +34,6 @@ Gem::Specification.new do |s|
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
+  s.require_paths = ['lib']
 end
